@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentorBridge - Your Future Starts with the Right Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'teal': '#0d9488',
+                        'beige': '#f5f5dc',
+                        'gold': '#fbbf24'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-beige">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-navy">🌉 MentorBridge</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-navy hover:text-teal px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#how-it-works" class="text-navy hover:text-teal px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                        <a href="#careers" class="text-navy hover:text-teal px-3 py-2 rounded-md text-sm font-medium transition-colors">Explore Careers</a>
+                        <a href="#stories" class="text-navy hover:text-teal px-3 py-2 rounded-md text-sm font-medium transition-colors">Success Stories</a>
+                        <a href="#join" class="bg-teal text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-teal-600 transition-colors">Join Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-navy hover:text-teal">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block text-navy hover:text-teal px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#how-it-works" class="block text-navy hover:text-teal px-3 py-2 rounded-md text-base font-medium">How It Works</a>
+                <a href="#careers" class="block text-navy hover:text-teal px-3 py-2 rounded-md text-base font-medium">Explore Careers</a>
+                <a href="#stories" class="block text-navy hover:text-teal px-3 py-2 rounded-md text-base font-medium">Success Stories</a>
+                <a href="#join" class="block text-navy hover:text-teal px-3 py-2 rounded-md text-base font-medium">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-navy to-teal text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Your future starts with the right mentor.</h1>
+                    <p class="text-xl mb-8 opacity-90">Connect with industry professionals who are passionate about helping students from underserved backgrounds achieve their dreams through personalized mentorship and career guidance.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="scrollToSection('join')" class="bg-gold text-navy px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-300 transition-colors transform hover:scale-105">Find a Mentor</button>
+                        <button onclick="scrollToSection('join')" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy transition-colors">Become a Mentor</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-10 rounded-3xl p-8 backdrop-blur-sm">
+                        <div class="text-8xl mb-4">🤝</div>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-3xl mb-2">👩‍🎓</div>
+                                <div class="text-sm">Students</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">💼</div>
+                                <div class="text-sm">Professionals</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl mb-2">🚀</div>
+                                <div class="text-sm">Success</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600">Four simple steps to transform your future</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-navy to-teal w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl text-white">📝</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">1. Sign Up</h3>
+                    <p class="text-gray-600">Create your profile and tell us about your interests, goals, and background.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-teal to-gold w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl text-white">🎯</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">2. Match</h3>
+                    <p class="text-gray-600">Our algorithm connects you with mentors who align with your career aspirations.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-gold to-navy w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl text-white">💬</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">3. Connect</h3>
+                    <p class="text-gray-600">Start meaningful conversations and build lasting professional relationships.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-gradient-to-br from-teal to-navy w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-3xl text-white">🌱</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">4. Grow</h3>
+                    <p class="text-gray-600">Develop skills, gain insights, and advance toward your dream career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Careers -->
+    <section id="careers" class="py-20 bg-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy mb-4">Explore Career Paths</h2>
+                <p class="text-xl text-gray-600">Discover opportunities across diverse industries</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group" onclick="openCareerModal('engineer')">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
+                    <h3 class="text-xl font-semibold text-navy mb-2">Engineering</h3>
+                    <p class="text-gray-600 mb-4">Build the future with technology and innovation</p>
+                    <div class="text-teal font-medium">Learn More →</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group" onclick="openCareerModal('teacher')">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="text-xl font-semibold text-navy mb-2">Education</h3>
+                    <p class="text-gray-600 mb-4">Shape minds and inspire the next generation</p>
+                    <div class="text-teal font-medium">Learn More →</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group" onclick="openCareerModal('designer')">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
+                    <h3 class="text-xl font-semibold text-navy mb-2">Design</h3>
+                    <p class="text-gray-600 mb-4">Create beautiful and functional experiences</p>
+                    <div class="text-teal font-medium">Learn More →</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group" onclick="openCareerModal('healthcare')">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🏥</div>
+                    <h3 class="text-xl font-semibold text-navy mb-2">Healthcare</h3>
+                    <p class="text-gray-600 mb-4">Make a difference in people's lives every day</p>
+                    <div class="text-teal font-medium">Learn More →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy mb-4">Success Stories</h2>
+                <p class="text-xl text-gray-600">Real impact, real transformations</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-beige to-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-navy to-teal rounded-full flex items-center justify-center text-white text-2xl mr-4">👩‍💻</div>
+                        <div>
+                            <h4 class="font-semibold text-navy">Maria Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Student → Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"My mentor helped me navigate the tech industry and land my dream job at a startup. The career simulations were incredibly valuable!"</p>
+                    <div class="flex text-gold">★★★★★</div>
+                </div>
+                <div class="bg-gradient-to-br from-beige to-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal to-gold rounded-full flex items-center justify-center text-white text-2xl mr-4">👨‍🏫</div>
+                        <div>
+                            <h4 class="font-semibold text-navy">James Chen</h4>
+                            <p class="text-gray-600 text-sm">Mentor → Marketing Director</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Mentoring students has been incredibly rewarding. Seeing them grow and succeed makes every conversation worthwhile."</p>
+                    <div class="flex text-gold">★★★★★</div>
+                </div>
+                <div class="bg-gradient-to-br from-beige to-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-gold to-navy rounded-full flex items-center justify-center text-white text-2xl mr-4">👩‍⚕️</div>
+                        <div>
+                            <h4 class="font-semibold text-navy">Aisha Patel</h4>
+                            <p class="text-gray-600 text-sm">Student → Nurse Practitioner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"The guided learning plan helped me understand the healthcare field better. Now I'm pursuing my nursing degree with confidence!"</p>
+                    <div class="flex text-gold">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Now -->
+    <section id="join" class="py-20 bg-gradient-to-br from-navy to-teal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                <p class="text-xl opacity-90">Choose your path and begin your journey today</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 rounded-3xl p-8 backdrop-blur-sm text-center hover:bg-opacity-20 transition-all">
+                    <div class="text-6xl mb-6">🎓</div>
+                    <h3 class="text-2xl font-bold mb-4">I'm a Student</h3>
+                    <p class="mb-6 opacity-90">Connect with industry professionals and accelerate your career journey</p>
+                    <ul class="text-left mb-8 space-y-2">
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Free mentorship matching</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Career simulations</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Personalized learning plans</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Industry insights</li>
+                    </ul>
+                    <button onclick="openSignupModal('student')" class="bg-gold text-navy px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-300 transition-colors w-full">Join as Student</button>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-3xl p-8 backdrop-blur-sm text-center hover:bg-opacity-20 transition-all">
+                    <div class="text-6xl mb-6">💼</div>
+                    <h3 class="text-2xl font-bold mb-4">I'm a Professional</h3>
+                    <p class="mb-6 opacity-90">Share your expertise and make a lasting impact on the next generation</p>
+                    <ul class="text-left mb-8 space-y-2">
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Flexible scheduling</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Meaningful connections</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Professional development</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Community impact</li>
+                    </ul>
+                    <button onclick="openSignupModal('mentor')" class="bg-white text-navy px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors w-full">Become a Mentor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">🌉 MentorBridge</div>
+                    <p class="text-gray-300">Connecting students with professionals to build brighter futures together.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">For Students</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-gold transition-colors">Find a Mentor</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Career Paths</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Learning Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">For Mentors</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-gold transition-colors">Become a Mentor</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Mentor Resources</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-gold transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 MentorBridge. All rights reserved. Empowering futures through mentorship.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Career Modal -->
+    <div id="career-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-2xl mx-4 max-h-96 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="modal-title" class="text-2xl font-bold text-navy"></h3>
+                <button onclick="closeCareerModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div id="modal-content"></div>
+            <div class="mt-6 flex gap-4">
+                <button onclick="downloadLearningPlan()" class="bg-teal text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-600 transition-colors">Download Learning Plan</button>
+                <button onclick="findMentors()" class="bg-gold text-navy px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors">Find Mentors</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-md mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 id="signup-title" class="text-2xl font-bold text-navy"></h3>
+                <button onclick="closeSignupModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div class="text-center mb-6">
+                <div id="signup-icon" class="text-6xl mb-4"></div>
+                <p id="signup-description" class="text-gray-600"></p>
+            </div>
+            <div class="bg-beige rounded-2xl p-6 text-center">
+                <h4 class="font-semibold text-navy mb-2">Demo Version</h4>
+                <p class="text-gray-600 text-sm mb-4">This is a sample interface. In the full version, you would complete registration and be matched with mentors or students.</p>
+                <button onclick="closeSignupModal()" class="bg-navy text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition-colors">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Career modal functions
+        const careerData = {
+            engineer: {
+                title: "Engineering Career Path",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Engineering combines creativity with technical skills to solve real-world problems.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Skills Needed</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Problem-solving</li>
+                                    <li>• Mathematics</li>
+                                    <li>• Programming</li>
+                                    <li>• Critical thinking</li>
+                                </ul>
+                            </div>
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Career Options</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Software Engineer</li>
+                                    <li>• Civil Engineer</li>
+                                    <li>• Mechanical Engineer</li>
+                                    <li>• Electrical Engineer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            teacher: {
+                title: "Education Career Path",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Education professionals shape the future by inspiring and teaching the next generation.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Skills Needed</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Communication</li>
+                                    <li>• Patience</li>
+                                    <li>• Leadership</li>
+                                    <li>• Creativity</li>
+                                </ul>
+                            </div>
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Career Options</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Elementary Teacher</li>
+                                    <li>• High School Teacher</li>
+                                    <li>• Principal</li>
+                                    <li>• Curriculum Designer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            designer: {
+                title: "Design Career Path",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Designers create beautiful and functional experiences that improve people's lives.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Skills Needed</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Creativity</li>
+                                    <li>• Visual thinking</li>
+                                    <li>• Software skills</li>
+                                    <li>• User empathy</li>
+                                </ul>
+                            </div>
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Career Options</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• UX/UI Designer</li>
+                                    <li>• Graphic Designer</li>
+                                    <li>• Product Designer</li>
+                                    <li>• Art Director</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            healthcare: {
+                title: "Healthcare Career Path",
+                content: `
+                    <div class="space-y-4">
+                        <p class="text-gray-600">Healthcare professionals make a direct impact on people's wellbeing and quality of life.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Skills Needed</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Compassion</li>
+                                    <li>• Attention to detail</li>
+                                    <li>• Science knowledge</li>
+                                    <li>• Communication</li>
+                                </ul>
+                            </div>
+                            <div class="bg-beige rounded-lg p-4">
+                                <h4 class="font-semibold text-navy mb-2">Career Options</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Registered Nurse</li>
+                                    <li>• Doctor</li>
+                                    <li>• Physical Therapist</li>
+                                    <li>• Medical Technician</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openCareerModal(career) {
+            const modal = document.getElementById('career-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            title.textContent = careerData[career].title;
+            content.innerHTML = careerData[career].content;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeCareerModal() {
+            const modal = document.getElementById('career-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function downloadLearningPlan() {
+            alert('Learning plan download started! In the full version, this would download a personalized PDF guide.');
+        }
+
+        function findMentors() {
+            scrollToSection('join');
+            closeCareerModal();
+        }
+
+        // Signup modal functions
+        function openSignupModal(type) {
+            const modal = document.getElementById('signup-modal');
+            const title = document.getElementById('signup-title');
+            const icon = document.getElementById('signup-icon');
+            const description = document.getElementById('signup-description');
+            
+            if (type === 'student') {
+                title.textContent = 'Join as Student';
+                icon.textContent = '🎓';
+                description.textContent = 'Get matched with industry professionals who can guide your career journey.';
+            } else {
+                title.textContent = 'Become a Mentor';
+                icon.textContent = '💼';
+                description.textContent = 'Share your expertise and help shape the next generation of professionals.';
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeSignupModal() {
+            const modal = document.getElementById('signup-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('career-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCareerModal();
+            }
+        });
+
+        document.getElementById('signup-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSignupModal();
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'965973f7b2798593',t:'MTc1MzU5MTE2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
